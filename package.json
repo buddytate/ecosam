@@ -1,0 +1,35 @@
+{
+	"name": "aboube_s",
+	"version": "1.0.0",
+	"description": "EcoSam",
+	"author": "",
+	"license": "ISC",
+	"scripts": {
+		"start": "pm2 start src/app.js --interpreter ./node_modules/.bin/babel-node",
+		"test": "babel-watch src/app.js",
+		"stop": "pm2 stop all"
+	},
+	"dependencies": {
+		"array-sort": "^1.0.0",
+		"async": "^2.6.1",
+		"base64url": "^3.0.0",
+		"body-parser": "^1.18.2",
+		"crypto-js": "^3.1.9-1",
+		"dateformat": "^3.0.3",
+		"express": "^4.16.2",
+		"mongoose": "^5.2.4",
+		"mongoose-sequence": "^4.0.1",
+		"mongoose-type-number-enums": "^1.0.4",
+		"mysql": "^2.15.0",
+		"node-datetime": "^2.0.6",
+		"rimraf": "^2.6.2"
+	},
+	"devDependencies": {
+		"aws-sdk": "^2.407.0",
+		"babel-cli": "^6.26.0",
+		"babel-preset-es2015": "^6.24.1",
+		"babel-watch": "^2.0.7",
+		"nodemon": "^1.18.3",
+		"pm2": "^2.10.1"
+	}
+}
