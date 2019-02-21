@@ -24,4 +24,16 @@ router.get('/getWallet/:id', (req, res) => {
 	})
 });
 
+router.put('/addToWallet', (req, res) => {
+	let money = req.body.money;
+	let id = req.body.id;
+	dao.addToWallet(id, money).then((user) => {
+		if (user != null) {
+			res.status(200).json({message: "wallet updated"});
+		} else {
+			json.handleError(constants.CODE_400, res);
+		}
+	});
+});
+
 export default router;
