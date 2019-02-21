@@ -1,7 +1,7 @@
 export const db = {
 	host: 'localhost/',
 	port: ':27017',
-	bddName: 'accessdrive'
+	bddName: 'ecosam'
 };
 
 export const server = {
