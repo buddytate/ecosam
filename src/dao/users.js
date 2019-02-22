@@ -29,7 +29,7 @@ export function findById(userId) {
 	});
 }
 
-export function addToWallet(id, money) {
+/*export function addToWallet(id, money) {
 	return User.findOneAndUpdate({id: id}, {$inc:{wallet: money}}, {new: true}, (err, doc) => {
 		if (err) {
 			console.log("Something wrong when updating data!");
@@ -37,12 +37,13 @@ export function addToWallet(id, money) {
 
 		return(doc);
 	});
+}*/
+
+
+export function addToWallet(id, money) {
+	return User.findOneAndUpdate({id: id}, {$inc:{wallet: money}}, {new: true}).then((match) => {
+		return(match);
+	}).catch((err) => {
+		return err;
+	})
 }
-
-/*Cat.findOneAndUpdate({age: 17}, {$set:{name:"Naomi"}},function(err, doc){
-    if(err){
-        console.log("Something wrong when updating data!");
-    }
-
-    console.log(doc);
-});*/
