@@ -30,12 +30,12 @@ export function findById(userId) {
 }
 
 export function addToWallet(id, money) {
-	return User.findOneAndUpdate({id: id}, {$set:{wallet: money}}, {new: true}, (err, doc) => {
+	return User.findOneAndUpdate({id: id}, {$inc:{wallet: money}}, {new: true}, (err, doc) => {
 		if (err) {
 			console.log("Something wrong when updating data!");
 		}
-		console.log(id)
-		console.log(doc);
+
+		return(doc);
 	});
 }
 
